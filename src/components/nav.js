@@ -2,16 +2,15 @@ const React = require("react");
 
 const { Link } = require("react-router-dom");
 
-function Nav(){
-    return(
-        <>
-            <nav className="nav">
-                <div className="nav-container">
-                
-                </div>
-            </nav>
-        </>
-    );
+function Nav({ title }) {
+  return (
+    <header>
+      <h1>{title}</h1>
+      <nav>
+        <Link to="/">Home</Link>
+      </nav>
+    </header>
+  );
 }
 
 module.exports = Nav;
