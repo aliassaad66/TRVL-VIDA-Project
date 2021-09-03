@@ -33751,6 +33751,8 @@ function Nav(_ref) {
     to: "/about"
   }, "About"), /*#__PURE__*/React.createElement(Link, {
     to: "/signup"
+  }), /*#__PURE__*/React.createElement(Link, {
+    to: "/button"
   })));
 }
 
@@ -33786,7 +33788,7 @@ function Clock() {
     }, 1000); // wait a second and call the callback
   }, [time] // Anytime time changes, call the callback function
   );
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h4", null, "you have been on the page for ", time, " seconds"));
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h4", null, "You have been on the page for ", time, " seconds"));
 }
 
 module.exports = Clock;
@@ -33802,10 +33804,18 @@ module.exports = Home;
 var React = require("react");
 
 function About() {
-  return /*#__PURE__*/React.createElement("dev", null, /*#__PURE__*/React.createElement("h2", null, "About Page"));
+  return /*#__PURE__*/React.createElement("dev", null, /*#__PURE__*/React.createElement("h2", null, "Explore Places"));
 }
 
 module.exports = About;
+},{"react":"../node_modules/react/index.js"}],"components/button.js":[function(require,module,exports) {
+var React = require("react");
+
+function Button() {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("button", null));
+}
+
+module.exports = Button;
 },{"react":"../node_modules/react/index.js"}],"components/app.js":[function(require,module,exports) {
 var React = require("react");
 
@@ -33824,22 +33834,22 @@ var Home = require("./home");
 
 var About = require("./about");
 
+var Button = require("./button");
+
 function App() {
   var pageTitle = "TRVL VIDA";
   return /*#__PURE__*/React.createElement(BrowserRouter, null, /*#__PURE__*/React.createElement(Nav, {
     title: pageTitle
-  }), /*#__PURE__*/React.createElement(Clock, null), /*#__PURE__*/React.createElement(Switch, null, /*#__PURE__*/React.createElement(Route, {
+  }), /*#__PURE__*/React.createElement(Clock, null), /*#__PURE__*/React.createElement(SignUp, null), /*#__PURE__*/React.createElement(Button, null), /*#__PURE__*/React.createElement(Switch, null, /*#__PURE__*/React.createElement(Route, {
     exact: true,
     path: "/"
   }, /*#__PURE__*/React.createElement(Home, null)), /*#__PURE__*/React.createElement(Route, {
     path: "/about"
-  }, /*#__PURE__*/React.createElement(About, null)), /*#__PURE__*/React.createElement(Route, {
-    path: "/signup"
-  }, /*#__PURE__*/React.createElement(SignUp, null))));
+  }, /*#__PURE__*/React.createElement(About, null))));
 }
 
 module.exports = App;
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./signup":"components/signup.js","./nav":"components/nav.js","./clock":"components/clock.js","./home":"components/home.js","./about":"components/about.js"}],"index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./signup":"components/signup.js","./nav":"components/nav.js","./clock":"components/clock.js","./home":"components/home.js","./about":"components/about.js","./button":"components/button.js"}],"index.js":[function(require,module,exports) {
 var React = require("react");
 
 var _require = require("react-dom"),
@@ -33849,7 +33859,7 @@ var App = require("./components/app");
 
 var target = document.querySelector("#app");
 render( /*#__PURE__*/React.createElement(App, null), target);
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./components/app":"components/app.js"}],"../../../AppData/Roaming/npm-cache/_npx/6380/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./components/app":"components/app.js"}],"../../../AppData/Roaming/npm-cache/_npx/6692/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -33877,7 +33887,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64890" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52772" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -34053,5 +34063,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/6380/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/6692/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/src.e31bb0bc.js.map

@@ -13,7 +13,7 @@ function Clock(){
 
     return(
         <div>
-            <h4>you have been on the page for {time} seconds</h4>
+            <h4>You have been on the page for {time} seconds</h4>
         </div>
     );
 }

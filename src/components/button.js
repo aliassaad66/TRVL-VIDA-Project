@@ -1,11 +1,11 @@
 const React = require("react");
 
-function Menu(){
+function Button(){
     return(
         <div>
-            <h2></h2>
+            <button></button>
         </div>
     );
 }
 
-module.exports = Menu;
+module.exports = Button;

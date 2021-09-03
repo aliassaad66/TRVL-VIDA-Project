@@ -6,6 +6,7 @@ const Nav = require("./nav");
 const Clock = require("./clock");
 const Home = require("./home");
 const About = require("./about");
+const Button = require("./button");
 
 function App(){
     let pageTitle = "TRVL VIDA";
@@ -13,15 +14,14 @@ function App(){
         <BrowserRouter>
             <Nav title={pageTitle} /> 
             <Clock />
+            <SignUp />
+            <Button />
             <Switch>
                 <Route exact={true} path="/">
                     <Home />
                 </Route>
                 <Route path="/about">
                     <About />
-                </Route>
-                <Route path="/signup">
-                    <SignUp />
                 </Route>
             </Switch>
         </BrowserRouter>
