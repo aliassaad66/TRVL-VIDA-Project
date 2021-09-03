@@ -1,14 +1,14 @@
 const React = require("react");
 
 const { BrowserRouter, Switch, Route } = require("react-router-dom");
+const SignUp = require("./signup");
 const Nav = require("./nav");
 const Clock = require("./clock");
-const SignUp = require("./signup");
 const Home = require("./home");
 const About = require("./about");
 
 function App(){
-    let pageTitle = "Travel Vida";
+    let pageTitle = "TRVL VIDA";
     return(
         <BrowserRouter>
             <Nav title={pageTitle} /> 

@@ -33664,56 +33664,7 @@ if ("development" !== "production") {
     style: _propTypes.default.object
   });
 }
-},{"react-router":"../node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"../node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"../node_modules/react/index.js","history":"../node_modules/history/esm/history.js","prop-types":"../node_modules/prop-types/index.js","tiny-warning":"../node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"../node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"components/nav.js":[function(require,module,exports) {
-var React = require("react");
-
-var _require = require("react-router-dom"),
-    Link = _require.Link;
-
-function Nav(_ref) {
-  var title = _ref.title;
-  return /*#__PURE__*/React.createElement("header", null, /*#__PURE__*/React.createElement("h1", null, title), /*#__PURE__*/React.createElement("nav", null, /*#__PURE__*/React.createElement(Link, {
-    to: "/"
-  }, "Home")));
-}
-
-module.exports = Nav;
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js"}],"components/clock.js":[function(require,module,exports) {
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-var React = require("react");
-
-var _require = require("react"),
-    useState = _require.useState,
-    useEffect = _require.useEffect;
-
-function Clock() {
-  var _useState = useState(0),
-      _useState2 = _slicedToArray(_useState, 2),
-      time = _useState2[0],
-      setTime = _useState2[1];
-
-  useEffect(function () {
-    setTimeout(function () {
-      setTime(time + 1); // update the time variable
-    }, 1000); // wait a second and call the callback
-  }, [time] // Anytime time changes, call the callback function
-  );
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", null, "you have been on the page for ", time, " seconds"));
-}
-
-module.exports = Clock;
-},{"react":"../node_modules/react/index.js"}],"components/signup.js":[function(require,module,exports) {
+},{"react-router":"../node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"../node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"../node_modules/react/index.js","history":"../node_modules/history/esm/history.js","prop-types":"../node_modules/prop-types/index.js","tiny-warning":"../node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"../node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"components/signup.js":[function(require,module,exports) {
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -33786,11 +33737,64 @@ module.exports = SignUp; // useEffect can receives two parameters
 //        (everytime any state changes)
 //  If the second parameter is an array with items in it
 //    The callback will run any time any of those items change
+},{"react":"../node_modules/react/index.js"}],"components/nav.js":[function(require,module,exports) {
+var React = require("react");
+
+var _require = require("react-router-dom"),
+    Link = _require.Link;
+
+function Nav(_ref) {
+  var title = _ref.title;
+  return /*#__PURE__*/React.createElement("header", null, /*#__PURE__*/React.createElement("h1", null, title), /*#__PURE__*/React.createElement("nav", null, /*#__PURE__*/React.createElement(Link, {
+    to: "/"
+  }, "Home"), /*#__PURE__*/React.createElement(Link, {
+    to: "/about"
+  }, "About"), /*#__PURE__*/React.createElement(Link, {
+    to: "/signup"
+  })));
+}
+
+module.exports = Nav;
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js"}],"components/clock.js":[function(require,module,exports) {
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var React = require("react");
+
+var _require = require("react"),
+    useState = _require.useState,
+    useEffect = _require.useEffect;
+
+function Clock() {
+  var _useState = useState(0),
+      _useState2 = _slicedToArray(_useState, 2),
+      time = _useState2[0],
+      setTime = _useState2[1];
+
+  useEffect(function () {
+    setTimeout(function () {
+      setTime(time + 1); // update the time variable
+    }, 1000); // wait a second and call the callback
+  }, [time] // Anytime time changes, call the callback function
+  );
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h4", null, "you have been on the page for ", time, " seconds"));
+}
+
+module.exports = Clock;
 },{"react":"../node_modules/react/index.js"}],"components/home.js":[function(require,module,exports) {
 var React = require("react");
 
 function Home() {
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", null, "Home Page"));
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", null, "ADVENTURE AWAITS"));
 }
 
 module.exports = Home;
@@ -33810,18 +33814,18 @@ var _require = require("react-router-dom"),
     Switch = _require.Switch,
     Route = _require.Route;
 
+var SignUp = require("./signup");
+
 var Nav = require("./nav");
 
 var Clock = require("./clock");
-
-var SignUp = require("./signup");
 
 var Home = require("./home");
 
 var About = require("./about");
 
 function App() {
-  var pageTitle = "Travel Vida";
+  var pageTitle = "TRVL VIDA";
   return /*#__PURE__*/React.createElement(BrowserRouter, null, /*#__PURE__*/React.createElement(Nav, {
     title: pageTitle
   }), /*#__PURE__*/React.createElement(Clock, null), /*#__PURE__*/React.createElement(Switch, null, /*#__PURE__*/React.createElement(Route, {
@@ -33835,7 +33839,7 @@ function App() {
 }
 
 module.exports = App;
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./nav":"components/nav.js","./clock":"components/clock.js","./signup":"components/signup.js","./home":"components/home.js","./about":"components/about.js"}],"index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./signup":"components/signup.js","./nav":"components/nav.js","./clock":"components/clock.js","./home":"components/home.js","./about":"components/about.js"}],"index.js":[function(require,module,exports) {
 var React = require("react");
 
 var _require = require("react-dom"),

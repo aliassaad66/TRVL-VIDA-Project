@@ -8,6 +8,8 @@ function Nav({ title }) {
       <h1>{title}</h1>
       <nav>
         <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/signup"></Link>
       </nav>
     </header>
   );

@@ -23,7 +23,7 @@ function SignUp() {
       setError(!isEmailValid);
       // If it's an invalid email, error should be true
     },
-    [email], // If email changes, run the callback function
+    [email] // If email changes, run the callback function
   );
 
   return (
