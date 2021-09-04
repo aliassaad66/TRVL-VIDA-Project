@@ -4,4 +4,4 @@ const App = require("./components/app");
 
 let target = document.querySelector("#app");
 
-render(<App />, target);
+render(<App />, target); // Component to load, where to show it

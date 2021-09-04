@@ -3,7 +3,7 @@ const React = require("react");
 function About(){
     return(
         <dev>
-            <h2>Explore Places</h2>
+            <h2 style={{color:'blue'}}>Explore Wonderful Places</h2>
         </dev>
     );
 }

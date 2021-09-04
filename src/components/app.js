@@ -7,6 +7,8 @@ const Clock = require("./clock");
 const Home = require("./home");
 const About = require("./about");
 const Button = require("./button");
+const Menu = require("./menu");
+const Service = require("./service");
 
 function App(){
     let pageTitle = "TRVL VIDA";
@@ -22,6 +24,12 @@ function App(){
                 </Route>
                 <Route path="/about">
                     <About />
+                </Route>
+                <Route path="/menu">
+                    <Menu />
+                </Route>
+                <Route path="/service">
+                    <Service />
                 </Route>
             </Switch>
         </BrowserRouter>

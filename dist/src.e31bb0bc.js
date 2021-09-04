@@ -33753,6 +33753,10 @@ function Nav(_ref) {
     to: "/signup"
   }), /*#__PURE__*/React.createElement(Link, {
     to: "/button"
+  }), /*#__PURE__*/React.createElement(Link, {
+    to: "/menu"
+  }), /*#__PURE__*/React.createElement(Link, {
+    to: "/service"
   })));
 }
 
@@ -33804,7 +33808,11 @@ module.exports = Home;
 var React = require("react");
 
 function About() {
-  return /*#__PURE__*/React.createElement("dev", null, /*#__PURE__*/React.createElement("h2", null, "Explore Places"));
+  return /*#__PURE__*/React.createElement("dev", null, /*#__PURE__*/React.createElement("h2", {
+    style: {
+      color: 'blue'
+    }
+  }, "Explore Wonderful Places"));
 }
 
 module.exports = About;
@@ -33812,10 +33820,26 @@ module.exports = About;
 var React = require("react");
 
 function Button() {
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("button", null));
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("button", null, "Hi!"));
 }
 
 module.exports = Button;
+},{"react":"../node_modules/react/index.js"}],"components/menu.js":[function(require,module,exports) {
+var React = require("react");
+
+function Menu() {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", null));
+}
+
+module.exports = Menu;
+},{"react":"../node_modules/react/index.js"}],"components/service.js":[function(require,module,exports) {
+var React = require("react");
+
+function Service() {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", null, "The first-timer's travel guide"));
+}
+
+module.exports = Service;
 },{"react":"../node_modules/react/index.js"}],"components/app.js":[function(require,module,exports) {
 var React = require("react");
 
@@ -33836,6 +33860,10 @@ var About = require("./about");
 
 var Button = require("./button");
 
+var Menu = require("./menu");
+
+var Service = require("./service");
+
 function App() {
   var pageTitle = "TRVL VIDA";
   return /*#__PURE__*/React.createElement(BrowserRouter, null, /*#__PURE__*/React.createElement(Nav, {
@@ -33845,11 +33873,15 @@ function App() {
     path: "/"
   }, /*#__PURE__*/React.createElement(Home, null)), /*#__PURE__*/React.createElement(Route, {
     path: "/about"
-  }, /*#__PURE__*/React.createElement(About, null))));
+  }, /*#__PURE__*/React.createElement(About, null)), /*#__PURE__*/React.createElement(Route, {
+    path: "/menu"
+  }, /*#__PURE__*/React.createElement(Menu, null)), /*#__PURE__*/React.createElement(Route, {
+    path: "/service"
+  }, /*#__PURE__*/React.createElement(Service, null))));
 }
 
 module.exports = App;
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./signup":"components/signup.js","./nav":"components/nav.js","./clock":"components/clock.js","./home":"components/home.js","./about":"components/about.js","./button":"components/button.js"}],"index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./signup":"components/signup.js","./nav":"components/nav.js","./clock":"components/clock.js","./home":"components/home.js","./about":"components/about.js","./button":"components/button.js","./menu":"components/menu.js","./service":"components/service.js"}],"index.js":[function(require,module,exports) {
 var React = require("react");
 
 var _require = require("react-dom"),
@@ -33858,8 +33890,8 @@ var _require = require("react-dom"),
 var App = require("./components/app");
 
 var target = document.querySelector("#app");
-render( /*#__PURE__*/React.createElement(App, null), target);
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./components/app":"components/app.js"}],"../../../AppData/Roaming/npm-cache/_npx/6692/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+render( /*#__PURE__*/React.createElement(App, null), target); // Component to load, where to show it
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./components/app":"components/app.js"}],"../../../AppData/Roaming/npm-cache/_npx/5664/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -33887,7 +33919,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52772" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52619" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -34063,5 +34095,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/6692/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/5664/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/src.e31bb0bc.js.map
