@@ -11,7 +11,7 @@ function Nav({ title }) {
         <Link to="/about">About</Link>
         <Link to="/signup"></Link>
         <Link to="/button"></Link>
-        <Link to="/menu">menu</Link>
+        <Link to="/menu">Menu</Link>
         <Link to="/service">Service</Link>
       </nav>
     </header>

@@ -9,15 +9,17 @@ const About = require("./about");
 const Button = require("./button");
 const Menu = require("./menu");
 const Service = require("./service");
+const Footer = require("./footer");
 
 function App(){
     let pageTitle = "TRVL VIDA";
-    return(
-        <BrowserRouter>
+        return(
+            <BrowserRouter>
             <Nav title={pageTitle} /> 
             <Clock />
             <SignUp />
             <Button />
+            <Footer />
             <Switch>
                 <Route exact={true} path="/">
                     <Home />

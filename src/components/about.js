@@ -2,9 +2,10 @@ const React = require("react");
 
 function About(){
     return(
-        <dev>
-            <h2 style={{color:'blue'}}>Explore Wonderful Places</h2>
-        </dev>
+        <div>
+            <h1 style={{color:'blue'}}>Explore Wonderful Places</h1>
+            <img src="https://picsum.photos/400/500" alt="" />
+        </div>
     );
 }
 

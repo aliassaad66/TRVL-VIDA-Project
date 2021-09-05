@@ -1,0 +1,1 @@
+{"version":3,"sources":["styles.css"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA","file":"styles.8986bff4.css","sourceRoot":"..\\src","sourcesContent":["* {\r\n  margin: 10;\r\n  padding: 10;\r\n}\r\n.banner {\r\n  width: 100px;\r\n  height: 100vh;\r\n}\r\n.nav {\r\n  width: 100px;\r\n  height: 3px;\r\n}\r\n"]}

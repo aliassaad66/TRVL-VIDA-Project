@@ -1,11 +1,12 @@
 const React = require("react");
 
-function Menu(){
+
+function Image(){
     return(
         <div>
-            <h1>...</h1>
+
         </div>
     );
 }
 
-module.exports = Menu;
+module.exports = Image;

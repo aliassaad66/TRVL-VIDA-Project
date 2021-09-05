@@ -1,10 +1,13 @@
 const React = require("react");
 
 function Home(){
+    let img = document.querySelector("img"); 
     return(
         <div>
-            <h2>ADVENTURE AWAITS</h2>
+          <h1>ADVENTURE AWAIT'S</h1>
+          <img src="img/snow.jpg" alt="" />
         </div>
+            
     );
 }
 
