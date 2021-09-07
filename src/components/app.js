@@ -6,20 +6,18 @@ const Nav = require("./nav");
 const Clock = require("./clock");
 const Home = require("./home");
 const About = require("./about");
-const Button = require("./button");
+const ButtonClicks = require("./ButtonClicks");
 const Menu = require("./menu");
 const Service = require("./service");
 const Footer = require("./footer");
+const CountrySearch = require("./countrySearch");
 
 function App(){
     let pageTitle = "TRVL VIDA";
         return(
             <BrowserRouter>
             <Nav title={pageTitle} /> 
-            <Clock />
-            <SignUp />
-            <Button />
-            <Footer />
+            <CountrySearch />
             <Switch>
                 <Route exact={true} path="/">
                     <Home />
@@ -34,6 +32,10 @@ function App(){
                     <Service />
                 </Route>
             </Switch>
+            <SignUp />
+            <ButtonClicks />
+            <Clock />
+            <Footer />
         </BrowserRouter>
     );
 }

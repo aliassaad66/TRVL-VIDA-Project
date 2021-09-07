@@ -1,14 +1,14 @@
 const React = require("react");
 
 function Home(){
-    let img = document.querySelector("img"); 
     return(
-        <div>
+        <div style={{ backgroundImage: `url(${require("../img/home.jpg")})` }}>
           <h1>ADVENTURE AWAIT'S</h1>
-          <img src="img/snow.jpg" alt="" />
+          <h2>all excited for travel after pandemic covid-19 is over</h2>
+          <button>Watch Trailer</button>
         </div>
-            
+
     );
 }
 
-module.exports = Home;
+module.exports = Home;  

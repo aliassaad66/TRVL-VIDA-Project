@@ -16,14 +16,14 @@ function SignUp() {
     setEmail(event.target.value); // Updates the state, and re-renders the component
   }
 
-  // Let's add some validations!
+  // Add validations!
   useEffect(
     function () {
       let isEmailValid = email.includes("@");
       setError(!isEmailValid);
       // If it's an invalid email, error should be true
     },
-    [email] // If email changes, run the callback function
+    [email] // If email changes, run callback function
   );
 
   return (

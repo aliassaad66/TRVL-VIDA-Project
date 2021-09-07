@@ -33704,13 +33704,13 @@ function SignUp() {
 
   function handleChange(event) {
     setEmail(event.target.value); // Updates the state, and re-renders the component
-  } // Let's add some validations!
+  } // Add validations!
 
 
   useEffect(function () {
     var isEmailValid = email.includes("@");
     setError(!isEmailValid); // If it's an invalid email, error should be true
-  }, [email] // If email changes, run the callback function
+  }, [email] // If email changes, run callback function
   );
   return /*#__PURE__*/React.createElement("form", null, /*#__PURE__*/React.createElement("input", {
     type: "text",
@@ -33745,19 +33745,27 @@ var _require = require("react-router-dom"),
 
 function Nav(_ref) {
   var title = _ref.title;
-  return /*#__PURE__*/React.createElement("header", null, /*#__PURE__*/React.createElement("h1", null, title), /*#__PURE__*/React.createElement("nav", null, /*#__PURE__*/React.createElement(Link, {
+  return /*#__PURE__*/React.createElement("header", {
+    class: "header-nav"
+  }, /*#__PURE__*/React.createElement("h1", null, title), /*#__PURE__*/React.createElement("nav", null, /*#__PURE__*/React.createElement(Link, {
+    class: "Home",
     to: "/"
-  }, "Home"), /*#__PURE__*/React.createElement(Link, {
+  }, "HOME"), /*#__PURE__*/React.createElement(Link, {
+    class: "about",
     to: "/about"
-  }, "About"), /*#__PURE__*/React.createElement(Link, {
+  }, "ABOUT"), /*#__PURE__*/React.createElement(Link, {
+    class: "signup",
     to: "/signup"
   }), /*#__PURE__*/React.createElement(Link, {
-    to: "/button"
+    class: "buttonClicks",
+    to: "/buttonClicks"
   }), /*#__PURE__*/React.createElement(Link, {
-    to: "/menu"
-  }, "Menu"), /*#__PURE__*/React.createElement(Link, {
+    class: "service",
     to: "/service"
-  }, "Service")));
+  }, "SERVICE"), /*#__PURE__*/React.createElement(Link, {
+    class: "menu",
+    to: "/menu"
+  }, "MENU")));
 }
 
 module.exports = Nav;
@@ -33796,19 +33804,21 @@ function Clock() {
 }
 
 module.exports = Clock;
-},{"react":"../node_modules/react/index.js"}],"components/home.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js"}],"img/home.jpg":[function(require,module,exports) {
+module.exports = "/home.dc07cc9e.jpg";
+},{}],"components/home.js":[function(require,module,exports) {
 var React = require("react");
 
 function Home() {
-  var img = document.querySelector("img");
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", null, "ADVENTURE AWAIT'S"), /*#__PURE__*/React.createElement("img", {
-    src: "img/snow.jpg",
-    alt: ""
-  }));
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      backgroundImage: "url(".concat(require("../img/home.jpg"), ")")
+    }
+  }, /*#__PURE__*/React.createElement("h1", null, "ADVENTURE AWAIT'S"), /*#__PURE__*/React.createElement("h2", null, "all excited for travel after pandemic covid-19 is over"), /*#__PURE__*/React.createElement("button", null, "Watch Trailer"));
 }
 
 module.exports = Home;
-},{"react":"../node_modules/react/index.js"}],"components/about.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../img/home.jpg":"img/home.jpg"}],"components/about.js":[function(require,module,exports) {
 var React = require("react");
 
 function About() {
@@ -33823,14 +33833,40 @@ function About() {
 }
 
 module.exports = About;
-},{"react":"../node_modules/react/index.js"}],"components/button.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js"}],"components/ButtonClicks.js":[function(require,module,exports) {
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 var React = require("react");
 
-function Button() {
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("button", null, "Hi!"));
+var _require = require("react"),
+    useState = _require.useState;
+
+function ButtonClicks() {
+  var _useState = useState(0),
+      _useState2 = _slicedToArray(_useState, 2),
+      count = _useState2[0],
+      setCount = _useState2[1];
+
+  function onButtonClick() {
+    setCount(count + 1); // start counting with 1
+  }
+
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h3", null, "You have liked ", count, " times"), /*#__PURE__*/React.createElement("button", {
+    onClick: onButtonClick
+  }, "Like"));
 }
 
-module.exports = Button;
+module.exports = ButtonClicks;
 },{"react":"../node_modules/react/index.js"}],"components/menu.js":[function(require,module,exports) {
 var React = require("react");
 
@@ -33839,18 +33875,20 @@ function Menu() {
 }
 
 module.exports = Menu;
-},{"react":"../node_modules/react/index.js"}],"components/service.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js"}],"img/Beach.jpg":[function(require,module,exports) {
+module.exports = "/Beach.fd522ff0.jpg";
+},{}],"components/service.js":[function(require,module,exports) {
 var React = require("react");
 
 function Service() {
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", null, "The First-Timer's Travel Guide"), /*#__PURE__*/React.createElement("img", {
-    src: "https://picsum.photos/500/500",
-    alt: ""
+    class: "Beach",
+    src: require('../img/Beach.jpg')
   }));
 }
 
 module.exports = Service;
-},{"react":"../node_modules/react/index.js"}],"components/footer.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../img/Beach.jpg":"img/Beach.jpg"}],"components/footer.js":[function(require,module,exports) {
 var React = require("react");
 
 function Footer() {
@@ -33858,6 +33896,72 @@ function Footer() {
 }
 
 module.exports = Footer;
+},{"react":"../node_modules/react/index.js"}],"components/countrySearch.js":[function(require,module,exports) {
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var React = require("react");
+
+var _require = require("react"),
+    useState = _require.useState;
+
+function CountrySearch() {
+  var _useState = useState(""),
+      _useState2 = _slicedToArray(_useState, 2),
+      name = _useState2[0],
+      setName = _useState2[1];
+
+  var _useState3 = useState(null),
+      _useState4 = _slicedToArray(_useState3, 2),
+      data = _useState4[0],
+      handleData = _useState4[1];
+
+  var dataMarkup = "There is no data to show";
+
+  if (data !== null) {
+    dataMarkup = JSON.stringify(data);
+  }
+
+  function updateName(event) {
+    setName(event.target.value);
+  }
+
+  function search(event) {
+    event.preventDefault();
+    var url = "https://restcountries.eu/rest/v2/name/".concat(name);
+    var queryString = "?fullText=true";
+    fetch(url + queryString, {
+      method: "GET"
+    }).then(function waitForData(res) {
+      return res.json();
+    }).then(function (data) {
+      handleData(data);
+    });
+  }
+
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("form", {
+    onSubmit: search
+  }, /*#__PURE__*/React.createElement("input", {
+    type: "text",
+    placeholder: "Country",
+    value: name,
+    onChange: updateName
+  }), /*#__PURE__*/React.createElement("input", {
+    type: "submit",
+    value: "Search"
+  })), /*#__PURE__*/React.createElement("p", null, dataMarkup));
+}
+
+module.exports = CountrySearch;
 },{"react":"../node_modules/react/index.js"}],"components/app.js":[function(require,module,exports) {
 var React = require("react");
 
@@ -33876,7 +33980,7 @@ var Home = require("./home");
 
 var About = require("./about");
 
-var Button = require("./button");
+var ButtonClicks = require("./ButtonClicks");
 
 var Menu = require("./menu");
 
@@ -33884,11 +33988,13 @@ var Service = require("./service");
 
 var Footer = require("./footer");
 
+var CountrySearch = require("./countrySearch");
+
 function App() {
   var pageTitle = "TRVL VIDA";
   return /*#__PURE__*/React.createElement(BrowserRouter, null, /*#__PURE__*/React.createElement(Nav, {
     title: pageTitle
-  }), /*#__PURE__*/React.createElement(Clock, null), /*#__PURE__*/React.createElement(SignUp, null), /*#__PURE__*/React.createElement(Button, null), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(Switch, null, /*#__PURE__*/React.createElement(Route, {
+  }), /*#__PURE__*/React.createElement(CountrySearch, null), /*#__PURE__*/React.createElement(Switch, null, /*#__PURE__*/React.createElement(Route, {
     exact: true,
     path: "/"
   }, /*#__PURE__*/React.createElement(Home, null)), /*#__PURE__*/React.createElement(Route, {
@@ -33897,11 +34003,11 @@ function App() {
     path: "/menu"
   }, /*#__PURE__*/React.createElement(Menu, null)), /*#__PURE__*/React.createElement(Route, {
     path: "/service"
-  }, /*#__PURE__*/React.createElement(Service, null))));
+  }, /*#__PURE__*/React.createElement(Service, null))), /*#__PURE__*/React.createElement(SignUp, null), /*#__PURE__*/React.createElement(ButtonClicks, null), /*#__PURE__*/React.createElement(Clock, null), /*#__PURE__*/React.createElement(Footer, null));
 }
 
 module.exports = App;
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./signup":"components/signup.js","./nav":"components/nav.js","./clock":"components/clock.js","./home":"components/home.js","./about":"components/about.js","./button":"components/button.js","./menu":"components/menu.js","./service":"components/service.js","./footer":"components/footer.js"}],"index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./signup":"components/signup.js","./nav":"components/nav.js","./clock":"components/clock.js","./home":"components/home.js","./about":"components/about.js","./ButtonClicks":"components/ButtonClicks.js","./menu":"components/menu.js","./service":"components/service.js","./footer":"components/footer.js","./countrySearch":"components/countrySearch.js"}],"index.js":[function(require,module,exports) {
 var React = require("react");
 
 var _require = require("react-dom"),
@@ -33911,7 +34017,7 @@ var App = require("./components/app");
 
 var target = document.querySelector("#app");
 render( /*#__PURE__*/React.createElement(App, null), target); // Component to load, where to show it
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./components/app":"components/app.js"}],"../../../AppData/Roaming/npm-cache/_npx/7780/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./components/app":"components/app.js"}],"../../../AppData/Roaming/npm-cache/_npx/5224/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -33939,7 +34045,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63961" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49195" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -34115,5 +34221,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/7780/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/5224/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/src.e31bb0bc.js.map

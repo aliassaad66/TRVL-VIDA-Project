@@ -4,15 +4,15 @@ const { Link } = require("react-router-dom");
 
 function Nav({ title }) {
   return (
-    <header>
+    <header class="header-nav">
       <h1>{title}</h1>
       <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/signup"></Link>
-        <Link to="/button"></Link>
-        <Link to="/menu">Menu</Link>
-        <Link to="/service">Service</Link>
+        <Link class="Home" to="/">HOME</Link>
+        <Link class="about" to="/about">ABOUT</Link>
+        <Link class="signup" to="/signup"></Link>
+        <Link class="buttonClicks" to="/buttonClicks"></Link>
+        <Link class="service" to="/service">SERVICE</Link>
+        <Link class="menu" to="/menu">MENU</Link>
       </nav>
     </header>
   );
