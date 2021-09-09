@@ -17,7 +17,6 @@ function App(){
         return(
             <BrowserRouter>
             <Nav title={pageTitle} /> 
-            <CountrySearch />
             <Switch>
                 <Route exact={true} path="/">
                     <Home />
@@ -32,6 +31,7 @@ function App(){
                     <Service />
                 </Route>
             </Switch>
+            <CountrySearch />
             <SignUp />
             <ButtonClicks />
             <Clock />

@@ -33811,29 +33811,59 @@ var React = require("react");
 
 function Home() {
   return /*#__PURE__*/React.createElement("div", {
+    class: "fix",
     style: {
       backgroundImage: "url(".concat(require("../img/home.jpg"), ")")
     }
-  }, /*#__PURE__*/React.createElement("h1", null, "ADVENTURE AWAIT'S"), /*#__PURE__*/React.createElement("h2", null, "all excited for travel after pandemic covid-19 is over"), /*#__PURE__*/React.createElement("button", null, "Watch Trailer"));
+  }, /*#__PURE__*/React.createElement("h1", {
+    class: "adventure",
+    style: {
+      color: 'white'
+    }
+  }, "ADVENTURE AWAIT'S"), /*#__PURE__*/React.createElement("h2", {
+    class: "waiting",
+    style: {
+      color: 'white'
+    }
+  }, "What are you waiting for?"), /*#__PURE__*/React.createElement("button", {
+    class: "button"
+  }, "Start Here"));
 }
 
 module.exports = Home;
-},{"react":"../node_modules/react/index.js","../img/home.jpg":"img/home.jpg"}],"components/about.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../img/home.jpg":"img/home.jpg"}],"mp4/video-1.mp4":[function(require,module,exports) {
+module.exports = "/video-1.a4170205.mp4";
+},{}],"components/about.js":[function(require,module,exports) {
 var React = require("react");
 
 function About() {
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", {
     style: {
-      color: 'blue'
+      color: 'white'
     }
-  }, "Explore Wonderful Places"), /*#__PURE__*/React.createElement("img", {
-    src: "https://picsum.photos/400/500",
-    alt: ""
-  }));
+  }, "Explore Wonderful Places"), /*#__PURE__*/React.createElement("video", {
+    loop: true,
+    autoPlay: true,
+    muted: true,
+    id: "bg-video",
+    style: {
+      position: "absolute",
+      width: "100%",
+      left: "50%",
+      top: "50%",
+      height: "100%",
+      objectFit: "cover",
+      transform: "translate(-50%, -50%)",
+      zIndex: "-1"
+    }
+  }, /*#__PURE__*/React.createElement("source", {
+    src: require('../mp4/video-1.mp4'),
+    type: "video/mp4"
+  })));
 }
 
 module.exports = About;
-},{"react":"../node_modules/react/index.js"}],"components/ButtonClicks.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../mp4/video-1.mp4":"mp4/video-1.mp4"}],"components/ButtonClicks.js":[function(require,module,exports) {
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -33867,28 +33897,51 @@ function ButtonClicks() {
 }
 
 module.exports = ButtonClicks;
-},{"react":"../node_modules/react/index.js"}],"components/menu.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js"}],"img/Beach.jpg":[function(require,module,exports) {
+module.exports = "/Beach.fd522ff0.jpg";
+},{}],"components/menu.js":[function(require,module,exports) {
 var React = require("react");
 
 function Menu() {
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", null, "..."));
-}
-
-module.exports = Menu;
-},{"react":"../node_modules/react/index.js"}],"img/Beach.jpg":[function(require,module,exports) {
-module.exports = "/Beach.fd522ff0.jpg";
-},{}],"components/service.js":[function(require,module,exports) {
-var React = require("react");
-
-function Service() {
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", null, "The First-Timer's Travel Guide"), /*#__PURE__*/React.createElement("img", {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", null, "..."), /*#__PURE__*/React.createElement("img", {
+    src: "https://picsum.photos/400/500",
+    alt: ""
+  }), /*#__PURE__*/React.createElement("img", {
     class: "Beach",
     src: require('../img/Beach.jpg')
   }));
 }
 
+module.exports = Menu;
+},{"react":"../node_modules/react/index.js","../img/Beach.jpg":"img/Beach.jpg"}],"mp4/video-2.mp4":[function(require,module,exports) {
+module.exports = "/video-2.b7d281e8.mp4";
+},{}],"components/service.js":[function(require,module,exports) {
+var React = require("react");
+
+function Service() {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", null, "The First-Timer's Travel Guide"), /*#__PURE__*/React.createElement("video", {
+    loop: true,
+    autoPlay: true,
+    muted: true,
+    id: "vg-video",
+    style: {
+      position: "absolute",
+      width: "100%",
+      left: "50%",
+      top: "50%",
+      height: "100%",
+      objectFit: "cover",
+      transform: "translate(-50%, -50%)",
+      zIndex: "-1"
+    }
+  }, /*#__PURE__*/React.createElement("source", {
+    src: require('../mp4/video-2.mp4'),
+    type: "video/mp4"
+  })));
+}
+
 module.exports = Service;
-},{"react":"../node_modules/react/index.js","../img/Beach.jpg":"img/Beach.jpg"}],"components/footer.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../mp4/video-2.mp4":"mp4/video-2.mp4"}],"components/footer.js":[function(require,module,exports) {
 var React = require("react");
 
 function Footer() {
@@ -33994,7 +34047,7 @@ function App() {
   var pageTitle = "TRVL VIDA";
   return /*#__PURE__*/React.createElement(BrowserRouter, null, /*#__PURE__*/React.createElement(Nav, {
     title: pageTitle
-  }), /*#__PURE__*/React.createElement(CountrySearch, null), /*#__PURE__*/React.createElement(Switch, null, /*#__PURE__*/React.createElement(Route, {
+  }), /*#__PURE__*/React.createElement(Switch, null, /*#__PURE__*/React.createElement(Route, {
     exact: true,
     path: "/"
   }, /*#__PURE__*/React.createElement(Home, null)), /*#__PURE__*/React.createElement(Route, {
@@ -34003,7 +34056,7 @@ function App() {
     path: "/menu"
   }, /*#__PURE__*/React.createElement(Menu, null)), /*#__PURE__*/React.createElement(Route, {
     path: "/service"
-  }, /*#__PURE__*/React.createElement(Service, null))), /*#__PURE__*/React.createElement(SignUp, null), /*#__PURE__*/React.createElement(ButtonClicks, null), /*#__PURE__*/React.createElement(Clock, null), /*#__PURE__*/React.createElement(Footer, null));
+  }, /*#__PURE__*/React.createElement(Service, null))), /*#__PURE__*/React.createElement(CountrySearch, null), /*#__PURE__*/React.createElement(SignUp, null), /*#__PURE__*/React.createElement(ButtonClicks, null), /*#__PURE__*/React.createElement(Clock, null), /*#__PURE__*/React.createElement(Footer, null));
 }
 
 module.exports = App;
@@ -34017,7 +34070,7 @@ var App = require("./components/app");
 
 var target = document.querySelector("#app");
 render( /*#__PURE__*/React.createElement(App, null), target); // Component to load, where to show it
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./components/app":"components/app.js"}],"../../../AppData/Roaming/npm-cache/_npx/5224/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./components/app":"components/app.js"}],"../../../AppData/Roaming/npm-cache/_npx/4624/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -34045,7 +34098,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49195" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65477" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -34221,5 +34274,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/5224/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/4624/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/src.e31bb0bc.js.map

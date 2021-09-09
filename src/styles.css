@@ -43,11 +43,40 @@
   align-items: center;
 }
 
-.home {
-  width: 100%;
-  height: 100%;
+.fix {
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  position: relative;
+  height: 100vh;
+  width: 100%;
+  margin-top: 0;
+}
+.adventure {
+  position: absolute;
   align-items: center;
+  top: 41%;
+  left: 39%;
+}
+.waiting {
+  position: absolute;
+  align-items: center;
+  top: 48%;
+  left: 41%;
+}
+
+.button {
+  padding: 15px 25px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.6s ease;
+  font-size: large;
+}
+.button:hover {
+  background-color: #fff;
+  color: #000;
 }

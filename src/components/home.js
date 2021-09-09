@@ -1,13 +1,12 @@
-const React = require("react");
+const React = require("react"); 
 
 function Home(){
     return(
-        <div style={{ backgroundImage: `url(${require("../img/home.jpg")})` }}>
-          <h1>ADVENTURE AWAIT'S</h1>
-          <h2>all excited for travel after pandemic covid-19 is over</h2>
-          <button>Watch Trailer</button>
+        <div class="fix" style={{ backgroundImage: `url(${require("../img/home.jpg")})` }}> 
+          <h1 class="adventure" style={{color:'white'}}>ADVENTURE AWAIT'S</h1>
+          <h2 class="waiting" style={{color:'white'}}>What are you waiting for?</h2>
+          <button class="button">Start Here</button>
         </div>
-
     );
 }
 
