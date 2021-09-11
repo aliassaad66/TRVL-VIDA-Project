@@ -3,7 +3,28 @@ const React = require("react");
 function Service(){
     return(
         <div>
-            <h2>The First-Timer's Travel Guide</h2>
+            <h1 class="firstTimer" style={{color:'white'}}>The First-Timer's Travel Guide</h1>
+            <h2 class="checkOut" style={{color:'white'}}>Check out below activities</h2>
+            <div class="head-text">
+                <div class = "head-image">
+                    <img class="snow" src={require('../img/snow2.jpg')} />
+                    <img class="HotBallon" src={require('../img/HotBallon.jpg')} />
+                    <img class="Sakura" src={require('../img/Sakura.jpg')} />
+                    <img class="venice" src={require('../img/venice.jpg')} />
+                </div>
+                <div class="snow__text">
+                     <h3>Switzerland's ski resort of Zermatt</h3>
+                </div>
+                <div class="HotBallon__text">
+                     <h3>Colourful hot air balloons in Cappadocia, Turkey</h3>
+                </div>
+                <div class="Sakura__text">
+                     <h3>Cruise down the Grand Canal venice, Italy</h3>
+                </div>
+                <div class="venice__text">
+                     <h3>Cherry blossoms and Mt.Fuji, Japan</h3>
+                </div>
+            </div>
             <video loop autoPlay muted id="vg-video"
             style={{
                 position: "absolute",

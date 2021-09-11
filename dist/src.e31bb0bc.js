@@ -33809,6 +33809,9 @@ module.exports = "/home.dc07cc9e.jpg";
 },{}],"components/home.js":[function(require,module,exports) {
 var React = require("react");
 
+var _require = require("react-router-dom"),
+    Link = _require.Link;
+
 function Home() {
   return /*#__PURE__*/React.createElement("div", {
     class: "fix",
@@ -33825,13 +33828,15 @@ function Home() {
     style: {
       color: 'white'
     }
-  }, "What are you waiting for?"), /*#__PURE__*/React.createElement("button", {
+  }, "What are you waiting for?"), /*#__PURE__*/React.createElement(Link, {
+    to: "/service"
+  }, /*#__PURE__*/React.createElement("button", {
     class: "button"
-  }, "Start Here"));
+  }, "Start Here")));
 }
 
 module.exports = Home;
-},{"react":"../node_modules/react/index.js","../img/home.jpg":"img/home.jpg"}],"mp4/video-1.mp4":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../img/home.jpg":"img/home.jpg"}],"mp4/video-1.mp4":[function(require,module,exports) {
 module.exports = "/video-1.a4170205.mp4";
 },{}],"components/about.js":[function(require,module,exports) {
 var React = require("react");
@@ -33897,29 +33902,63 @@ function ButtonClicks() {
 }
 
 module.exports = ButtonClicks;
-},{"react":"../node_modules/react/index.js"}],"img/Beach.jpg":[function(require,module,exports) {
-module.exports = "/Beach.fd522ff0.jpg";
-},{}],"components/menu.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js"}],"components/menu.js":[function(require,module,exports) {
 var React = require("react");
 
 function Menu() {
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", null, "..."), /*#__PURE__*/React.createElement("img", {
-    src: "https://picsum.photos/400/500",
-    alt: ""
-  }), /*#__PURE__*/React.createElement("img", {
-    class: "Beach",
-    src: require('../img/Beach.jpg')
-  }));
+  return /*#__PURE__*/React.createElement("div", null);
 }
 
 module.exports = Menu;
-},{"react":"../node_modules/react/index.js","../img/Beach.jpg":"img/Beach.jpg"}],"mp4/video-2.mp4":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js"}],"img/snow2.jpg":[function(require,module,exports) {
+module.exports = "/snow2.4b0f6251.jpg";
+},{}],"img/HotBallon.jpg":[function(require,module,exports) {
+module.exports = "/HotBallon.1dd900f2.jpg";
+},{}],"img/Sakura.jpg":[function(require,module,exports) {
+module.exports = "/Sakura.fe346820.jpg";
+},{}],"img/venice.jpg":[function(require,module,exports) {
+module.exports = "/venice.8302458e.jpg";
+},{}],"mp4/video-2.mp4":[function(require,module,exports) {
 module.exports = "/video-2.b7d281e8.mp4";
 },{}],"components/service.js":[function(require,module,exports) {
 var React = require("react");
 
 function Service() {
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", null, "The First-Timer's Travel Guide"), /*#__PURE__*/React.createElement("video", {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", {
+    class: "firstTimer",
+    style: {
+      color: 'white'
+    }
+  }, "The First-Timer's Travel Guide"), /*#__PURE__*/React.createElement("h2", {
+    class: "checkOut",
+    style: {
+      color: 'white'
+    }
+  }, "Check out below activities"), /*#__PURE__*/React.createElement("div", {
+    class: "head-text"
+  }, /*#__PURE__*/React.createElement("div", {
+    class: "head-image"
+  }, /*#__PURE__*/React.createElement("img", {
+    class: "snow",
+    src: require('../img/snow2.jpg')
+  }), /*#__PURE__*/React.createElement("img", {
+    class: "HotBallon",
+    src: require('../img/HotBallon.jpg')
+  }), /*#__PURE__*/React.createElement("img", {
+    class: "Sakura",
+    src: require('../img/Sakura.jpg')
+  }), /*#__PURE__*/React.createElement("img", {
+    class: "venice",
+    src: require('../img/venice.jpg')
+  })), /*#__PURE__*/React.createElement("div", {
+    class: "snow__text"
+  }, /*#__PURE__*/React.createElement("h3", null, "Switzerland's ski resort of Zermatt")), /*#__PURE__*/React.createElement("div", {
+    class: "HotBallon__text"
+  }, /*#__PURE__*/React.createElement("h3", null, "Colourful hot air balloons in Cappadocia, Turkey")), /*#__PURE__*/React.createElement("div", {
+    class: "Sakura__text"
+  }, /*#__PURE__*/React.createElement("h3", null, "Cruise down the Grand Canal venice, Italy")), /*#__PURE__*/React.createElement("div", {
+    class: "venice__text"
+  }, /*#__PURE__*/React.createElement("h3", null, "Cherry blossoms and Mt.Fuji, Japan"))), /*#__PURE__*/React.createElement("video", {
     loop: true,
     autoPlay: true,
     muted: true,
@@ -33941,11 +33980,63 @@ function Service() {
 }
 
 module.exports = Service;
-},{"react":"../node_modules/react/index.js","../mp4/video-2.mp4":"mp4/video-2.mp4"}],"components/footer.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../img/snow2.jpg":"img/snow2.jpg","../img/HotBallon.jpg":"img/HotBallon.jpg","../img/Sakura.jpg":"img/Sakura.jpg","../img/venice.jpg":"img/venice.jpg","../mp4/video-2.mp4":"mp4/video-2.mp4"}],"components/footer.js":[function(require,module,exports) {
 var React = require("react");
 
 function Footer() {
-  return /*#__PURE__*/React.createElement("footer", null, /*#__PURE__*/React.createElement("h4", null, "Footer"));
+  return /*#__PURE__*/React.createElement("footer", {
+    class: "footer"
+  }, /*#__PURE__*/React.createElement("div", {
+    class: "container"
+  }, /*#__PURE__*/React.createElement("div", {
+    class: "row"
+  }, /*#__PURE__*/React.createElement("div", {
+    class: "footer-co1"
+  }, /*#__PURE__*/React.createElement("h4", null, "Company"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "#"
+  }, "about us")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "#"
+  }, "our services")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "#"
+  }, "privacy policy")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "#"
+  }, "affiliate program")))), /*#__PURE__*/React.createElement("div", {
+    class: "footer-co1"
+  }, /*#__PURE__*/React.createElement("h4", null, "Contact"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "#"
+  }, "FAQ")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "#"
+  }, "+03-0000000")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "#"
+  }, "alias_saad66@yahoo.com")))), /*#__PURE__*/React.createElement("div", {
+    class: "footer-co1"
+  }, /*#__PURE__*/React.createElement("h4", null, "Online Booking"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "#"
+  }, "flight tickets booking")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "#"
+  }, "hotels booking")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "#"
+  }, "activities trip booking")))), /*#__PURE__*/React.createElement("div", {
+    class: "footer-co1"
+  }, /*#__PURE__*/React.createElement("h4", null, "Follow Us"), /*#__PURE__*/React.createElement("div", {
+    class: "social-links"
+  }, /*#__PURE__*/React.createElement("a", {
+    href: "#"
+  }, /*#__PURE__*/React.createElement("i", {
+    class: "fab fa-facebook"
+  })), /*#__PURE__*/React.createElement("a", {
+    href: "#"
+  }, /*#__PURE__*/React.createElement("i", {
+    class: "fab fa-twitter"
+  })), /*#__PURE__*/React.createElement("a", {
+    href: "#"
+  }, /*#__PURE__*/React.createElement("i", {
+    class: "fab fa-instagram"
+  })), /*#__PURE__*/React.createElement("a", {
+    href: "#"
+  }, /*#__PURE__*/React.createElement("i", {
+    class: "fab fa-linkedin"
+  })))))));
 }
 
 module.exports = Footer;
@@ -34070,7 +34161,7 @@ var App = require("./components/app");
 
 var target = document.querySelector("#app");
 render( /*#__PURE__*/React.createElement(App, null), target); // Component to load, where to show it
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./components/app":"components/app.js"}],"../../../AppData/Roaming/npm-cache/_npx/4624/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./components/app":"components/app.js"}],"../../../AppData/Roaming/npm-cache/_npx/4892/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -34098,7 +34189,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65477" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61328" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -34274,5 +34365,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/4624/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/4892/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/src.e31bb0bc.js.map

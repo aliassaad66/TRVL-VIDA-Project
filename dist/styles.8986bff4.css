@@ -1,6 +1,7 @@
 * {
   margin: 10;
   padding: 10;
+  box-sizing: border-box;
 }
 
 .banner {
@@ -44,6 +45,7 @@
 }
 
 .fix {
+  margin-bottom: 2%;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -67,7 +69,7 @@
   padding: 15px 25px;
   border-radius: 2px;
   outline: none;
-  border: none;
+  border: 1px solid #fff;
   cursor: pointer;
   position: absolute;
   top: 60%;
@@ -75,10 +77,220 @@
   transform: translate(-50%, -50%);
   transition: 0.6s ease;
   font-size: large;
+  background-color: transparent;
+  font-weight: 800;
 }
 .button:hover {
   background-color: #fff;
   color: #000;
+}
+
+.firstTimer {
+  position: absolute;
+  align-items: center;
+  top: 41%;
+  left: 39%;
+}
+
+.checkOut {
+  position: absolute;
+  align-items: center;
+  top: 48%;
+  left: 44%;
+}
+
+.head-text {
+  position: relative;
+  color: #fff;
+}
+
+.snow {
+  margin-top: 40%;
+  width: 50%;
+  object-fit: cover;
+  float: left;
+  transition: 0.6s ease;
+  transition: 0.2s linear;
+}
+.snow:hover {
+  background-color: #000;
+  color: #000;
+  opacity: 0.5;
+  transform: scale(1.1);
+}
+.snow__text {
+  margin-top: 70%;
+  position: absolute;
+  left: 13%;
+  padding: 0 22px;
+  border-radius: 1px;
+  outline: none;
+  background-color: #000;
+  color: #fff;
+  transform: translate(-50%, -50%);
+}
+
+.HotBallon {
+  margin-top: 40%;
+  width: 50%;
+  object-fit: cover;
+  float: right;
+  transition: 0.6s ease;
+  transition: 0.2s linear;
+}
+.HotBallon:hover {
+  background-color: #000;
+  color: #000;
+  opacity: 0.5;
+  transform: scale(1.1);
+}
+.HotBallon__text {
+  margin-top: 65%;
+  position: absolute;
+  right: 2%;
+  padding: 0 22px;
+  border-radius: 1px;
+  outline: none;
+  background-color: #000;
+  color: #fff;
+  transform: translate(-50%, -50%);
+}
+
+.Sakura {
+  width: 50%;
+  object-fit: cover;
+  float: right;
+  transition: 0.6s ease;
+  transition: 0.2s linear;
+}
+.Sakura:hover {
+  background-color: #000;
+  color: #000;
+  opacity: 0.5;
+  transform: scale(1.1);
+}
+.Sakura__text {
+  margin-top: 98%;
+  position: absolute;
+  left: 13%;
+  padding: 0 22px;
+  border-radius: 1px;
+  outline: none;
+  background-color: #000;
+  color: #fff;
+  transform: translate(-50%, -50%);
+}
+
+.venice {
+  width: 50%;
+  object-fit: cover;
+  float: right;
+  margin-bottom: 18px;
+  transition: 0.6s ease;
+  transition: 0.2s linear;
+}
+.venice:hover {
+  background-color: #000;
+  color: #000;
+  opacity: 0.5;
+  transform: scale(1.1);
+}
+.venice__text {
+  margin-top: 98%;
+  position: absolute;
+  right: 13%;
+  padding: 0 22px;
+  border-radius: 1px;
+  outline: none;
+  background-color: #000;
+  color: #fff;
+  transform: translate(-50%, -50%);
+}
+
+.footer {
+  background-color: #24262b;
+  padding: 70px 0;
+}
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul {
+  list-style: none;
+}
+.footer-co1 {
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-co1 h4 {
+  font-size: 18px;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-co1 h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-co1 ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-co1 ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-co1 ul li a:hover {
+  color: #fff;
+  padding-left: 8px;
+}
+.footer-co1 .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+.footer-co1 .social-links a:hover {
+  color: #24262b;
+  background-color: #fff;
+}
+
+/* responsive */
+/* when minimize the tab/browser it will do responsive */
+@media (max-width: 767px) {
+  .footer-co1 {
+    width: 25%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 574px) {
+  .footer-co1 {
+    width: 100%;
+  }
 }
 
 

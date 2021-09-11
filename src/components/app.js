@@ -13,10 +13,10 @@ const Footer = require("./footer");
 const CountrySearch = require("./countrySearch");
 
 function App(){
-    let pageTitle = "TRVL VIDA";
+    let pageTitle = "TRVL VIDA"
         return(
             <BrowserRouter>
-            <Nav title={pageTitle} /> 
+            <Nav title={pageTitle} />
             <Switch>
                 <Route exact={true} path="/">
                     <Home />
