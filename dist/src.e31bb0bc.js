@@ -33726,17 +33726,7 @@ function SignUp() {
   }));
 }
 
-module.exports = SignUp; // useEffect can receives two parameters
-//  - a callback
-//  - optionally, a dependencies array
-// useEffect changes based on the second parameter
-//  If the second parameter is []
-//    The callback run once as soon as the component is rendered on the page
-//  If the second parameter doesn't exist
-//    The callback will run every time the component re-renders
-//        (everytime any state changes)
-//  If the second parameter is an array with items in it
-//    The callback will run any time any of those items change
+module.exports = SignUp;
 },{"react":"../node_modules/react/index.js"}],"components/nav.js":[function(require,module,exports) {
 var React = require("react");
 
@@ -33839,14 +33829,97 @@ module.exports = Home;
 },{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../img/home.jpg":"img/home.jpg"}],"mp4/video-1.mp4":[function(require,module,exports) {
 module.exports = "/video-1.a4170205.mp4";
 },{}],"components/about.js":[function(require,module,exports) {
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 var React = require("react");
 
+var _require = require("react"),
+    useState = _require.useState;
+
 function About() {
+  var _useState = useState(""),
+      _useState2 = _slicedToArray(_useState, 2),
+      location = _useState2[0],
+      setLocation = _useState2[1];
+
+  var _useState3 = useState(""),
+      _useState4 = _slicedToArray(_useState3, 2),
+      temperature = _useState4[0],
+      setTemperature = _useState4[1];
+
+  var _useState5 = useState(""),
+      _useState6 = _slicedToArray(_useState5, 2),
+      humidity = _useState6[0],
+      setHumidity = _useState6[1];
+
+  var _useState7 = useState(""),
+      _useState8 = _slicedToArray(_useState7, 2),
+      wind = _useState8[0],
+      setWind = _useState8[1];
+
+  var _useState9 = useState(""),
+      _useState10 = _slicedToArray(_useState9, 2),
+      description = _useState10[0],
+      setDescription = _useState10[1];
+
+  function getWeatherData() {
+    var apiKey = "7dfe309afec3ee637c6130947b96f76b";
+    var baseURL = "https://api.openweathermap.org/data/2.5/weather";
+    var queryString = "?q=".concat(location, "&appid=").concat(apiKey, "&units=metric");
+    var url = baseURL + queryString;
+    fetch(url, {
+      method: "GET"
+    }).then(function (res) {
+      return res.json();
+    }).then(function (data) {
+      setLocation(data.name);
+      setTemperature(data.main.temp);
+      setHumidity(data.main.humidity);
+      setWind(data.wind.speed);
+      setDescription(data.weather[0].description);
+    }).catch(function (err) {
+      console.log(err);
+    });
+  }
+
+  function handleChange(event) {
+    setLocation(event.target.value);
+  }
+
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", {
     style: {
       color: 'white'
     }
-  }, "Explore Wonderful Places"), /*#__PURE__*/React.createElement("video", {
+  }, "Weather Apps For Travelers"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("form", null, /*#__PURE__*/React.createElement("input", {
+    class: "Location",
+    type: "text",
+    placeholder: "Location",
+    value: location,
+    onChange: handleChange
+  })), /*#__PURE__*/React.createElement("button", {
+    class: "search",
+    onClick: getWeatherData
+  }, "Search")), /*#__PURE__*/React.createElement("div", {
+    class: "p"
+  }, /*#__PURE__*/React.createElement("p", {
+    class: "temp"
+  }, "Temperature: ", temperature, " ", /*#__PURE__*/React.createElement("span", null, "\u2103")), /*#__PURE__*/React.createElement("p", {
+    class: "humidity"
+  }, "Humidity: ", humidity, " ", /*#__PURE__*/React.createElement("span", null, "%")), /*#__PURE__*/React.createElement("p", {
+    class: "winds"
+  }, "Wind Speed: ", wind, " ", /*#__PURE__*/React.createElement("span", null, "km/h")), /*#__PURE__*/React.createElement("p", {
+    class: "description"
+  }, "Description: ", description)), /*#__PURE__*/React.createElement("video", {
     loop: true,
     autoPlay: true,
     muted: true,
@@ -34161,7 +34234,7 @@ var App = require("./components/app");
 
 var target = document.querySelector("#app");
 render( /*#__PURE__*/React.createElement(App, null), target); // Component to load, where to show it
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./components/app":"components/app.js"}],"../../../AppData/Roaming/npm-cache/_npx/4892/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./components/app":"components/app.js"}],"../../../AppData/Roaming/npm-cache/_npx/2664/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -34189,7 +34262,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61328" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62749" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -34365,5 +34438,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/4892/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/2664/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/src.e31bb0bc.js.map

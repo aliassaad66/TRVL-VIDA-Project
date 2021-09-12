@@ -43,16 +43,3 @@ function SignUp() {
 }
 
 module.exports = SignUp;
-
-// useEffect can receives two parameters
-//  - a callback
-//  - optionally, a dependencies array
-
-// useEffect changes based on the second parameter
-//  If the second parameter is []
-//    The callback run once as soon as the component is rendered on the page
-//  If the second parameter doesn't exist
-//    The callback will run every time the component re-renders
-//        (everytime any state changes)
-//  If the second parameter is an array with items in it
-//    The callback will run any time any of those items change
