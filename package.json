@@ -2,6 +2,7 @@
   "name": "travel-vida",
   "version": "1.0.0",
   "description": "",
+  "main": "index.js",
   "scripts": {
     "build": "parcel build src/index.html",
     "start": "parcel src/index.html",
@@ -11,7 +12,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.0.0-rc.0"
+    "parcel": "^2.0.0-rc.0",
+    "parcel-bundler": "^1.12.5"
   },
   "dependencies": {
     "react": "^17.0.2",
